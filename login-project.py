@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request, redirect
 
 app = Flask(__name__)
 #home page
@@ -17,7 +17,7 @@ def login():
         #================================================
         # check user đã đúng thì
         # chuyển hướng người dùng về trang home
-        return "Welcome home"
+        return redirect('/')
     return render_template('login.html')
 
 
